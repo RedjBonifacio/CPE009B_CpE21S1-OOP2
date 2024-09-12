@@ -67,11 +67,14 @@ class Person:
         print(f"Name: {self.__name}")
         print(f"Average Grade: {self.Grade():.2f}")
 
+class HonorsStudent(Person):
+    def Grade(self):
+        return (self._Person__pre + self._Person__mid + self._Person__fin) / 3 + 5  # Extra points for honors students
+
+print("\n(Application 1)")
 student1 = Person("Student 1", 85, 90, 88)
-student2 = Person("Student 2", 78, 82, 80)
-student3 = Person("Student 3", 92, 94, 96)
+student2 = HonorsStudent("Student 2", 78, 82, 80)
 
 student1.display_info()
 student2.display_info()
-student3.display_info()
 
