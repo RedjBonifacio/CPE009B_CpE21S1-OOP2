@@ -54,20 +54,24 @@ print("Area of the equilateral triangle:", obj2.area())
 
 ##Application 1
 class Person:
-    def __init__(self, name, grades):
+    def __init__(self, name, pre, mid, fin):
         self.__name = name
-        self.__grades = grades
+        self.__pre = pre
+        self.__mid = mid
+        self.__fin = fin
 
-    def get_info(self):
-        avg_grade = sum(self.__grades) / len(self.__grades)
-        return f"Name: {self.__name}\nGrades: {self.__grades}\nAverage Grade: {avg_grade:.2f}\n"
+    def Grade(self):
+        return (self.__pre + self.__mid + self.__fin) / 3
 
-students = [
-    Person("Student 1", [85, 90, 78]),
-    Person("Student 2", [88, 92, 80]),
-    Person("Student 3", [90, 85, 88])
-]
+    def display_info(self):
+        print(f"Name: {self.__name}")
+        print(f"Average Grade: {self.Grade():.2f}")
 
-for student in students:
-    print(student.get_info())
+student1 = Person("Student 1", 85, 90, 88)
+student2 = Person("Student 2", 78, 82, 80)
+student3 = Person("Student 3", 92, 94, 96)
+
+student1.display_info()
+student2.display_info()
+student3.display_info()
 
