@@ -5,7 +5,7 @@ class MyWindow:
         self.Label1 = Label(win, fg="black", text="Standard Calculator", font=("Arial Narrow", 20))
         self.Label1.place(x=100, y=35)
 
-        self.Label1 = Label(win, fg="black", text="redj pogi", font=("Arial Narrow", 11))
+        self.Label1 = Label(win, fg="black", text="pogi", font=("Arial Narrow", 11))
         self.Label1.place(x=10, y=265)
 
         self.Label2 = Label(win, fg="black", text="Number 1:", font=("Arial Narrow", 13))
